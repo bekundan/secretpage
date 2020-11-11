@@ -32,10 +32,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 //mongooes connect////
-mongoose.connect("mongodb://localhost:27017/userDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://SecretUsers:kunboi21@cluster0.ytd1w.mongodb.net/userDB",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 mongoose.set("useCreateIndex", true);
 //we add the new mongoose.Schema for the encryption data
 const userSchema = new mongoose.Schema({
